@@ -8,11 +8,11 @@
       <th>Age</th>
       <th class="text-center">Details</th>
     </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td class="text-center"><a class="btn btn-default btn-primary" id="fill slug" role="button">View Info</a></td>
+    <tr *ngFor="let cust of customers;let i=index">
+      <td>{{cust.firstName}}</td>
+      <td>{{cust.lastName}}</td>
+      <td>{{cust.age}}</td>
+      <td class="text-center" (click)="setSlug(cust.slug)"><a class="btn btn-default btn-primary" id="fill slug" role="button">View Info</a></td>
     </tr>
   </table>
 </div>

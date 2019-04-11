@@ -1,4 +1,4 @@
-<div class="info" *ngIf="">
+<div class="info" *ngIf="showDetailFlag">
   <h1 class="text-center">Customer Record</h1>
   <br />
   <table class="table table-bordered secondary-table">
@@ -13,7 +13,14 @@
       <th>State</th>
     </tr>
     <tr>
-      <td></td>
+      <td>{{customerData[0]}}</td>
+      <td>{{customerData[1]}}</td>
+      <td>{{customerData[2]}}</td>
+      <td>{{customerData[3]}}</td>
+      <td>{{customerData[4]}}</td>
+      <td>{{customerData[5]}}</td>
+      <td>{{customerData[6]}}</td>
+      <td>{{customerData[7]}}</td>
     </tr>
   </table>
   <br />

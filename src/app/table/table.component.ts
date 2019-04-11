@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'customer-table',
   templateUrl: './table.component.html',
 })
 export class TableComponent {
-
+  @Output() eventClicked = new EventEmitter<string>();
   selectedSlug: string = "";
   constructor() { }
   customers = [
@@ -17,11 +17,12 @@ export class TableComponent {
   ]
 
   setSlug(slug) {
-    // slug setter function
+    this.selectedSlug = slug;
+    this.eventClicked.emit(this.selectedSlug);
   }
 
   getSlug() {
     // slug getter function 
-      return "random string";
+    // return "random string";
   }
 }
